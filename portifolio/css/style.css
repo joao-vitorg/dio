@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background: linear-gradient(-45deg, #20bf55 0%, #01baef 74%);
+    background-size: 400% 400%;
+    animation: backgroundTransition 4s ease-in-out infinite;
+}
+
+#toggle {
+    display: none;
+}
+
+@keyframes backgroundTransition {
+    0% {
+        background-position: 0 80%;
+    }
+    50% {
+        background-position: 80% 100%;
+    }
+    100% {
+        background-position: 0 90%;
+    }
+}
+
+/* Cabeçalho */
+
+header {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    gap: 2rem;
+}
+
+header .checkbox {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+header .checkbox .trace {
+    width: 50px;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    border-radius: 4px;
+    transition: 0.3s ease-in-out;
+}
+
+header .checkbox .trace:nth-child(1) {
+    top: 26px;
+}
+
+header .checkbox .trace:nth-child(2) {
+    top: 46px;
+}
+
+header .checkbox .trace:nth-child(3) {
+    top: 66px;
+}
+
+header #toggle:checked + .checkbox .trace:nth-child(1) {
+    transform: rotate(45deg);
+    top: 47px;
+}
+
+header #toggle:checked + .checkbox .trace:nth-child(2) {
+    width: 0;
+    visibility: hidden;
+    opacity: 0;
+}
+
+header #toggle:checked + .checkbox .trace:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 48px;
+}
+
+header #links {
+    display: flex;
+    gap: 2rem;
+}
+
+header #links a:any-link {
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border: 2px solid white;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+header #links a:hover {
+    color: lightblue;
+    background-color: white;
+}
+
+/* Principal */
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0;
+    margin: auto;
+    background-color: white;
+    gap: 3rem;
+}
+
+main section {
+    display: flex;
+    gap: 3rem;
+    width: 70%;
+    align-items: center;
+}
+
+main section p {
+    text-align: justify;
+    color: gray;
+    line-height: 25px;
+}
+
+main section div {
+    display: flex;
+    min-width: 200px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/programming.png");
+    cursor: pointer;
+}
+
+main section div h3 {
+    color: white;
+    font-size: 32px;
+    transition: 0.3s ease-in-out;
+}
+
+main section div:hover h3 {
+    color: black;
+    background-color: white;
+}
+
+main section:nth-child(2) {
+    flex-direction: row-reverse;
+}
+
+/* Rodapé */
+
+footer {
+    padding: 3rem;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+@media (max-width: 800px) {
+    main section {
+        flex-direction: column !important;
+    }
+}
