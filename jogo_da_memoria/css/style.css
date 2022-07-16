@@ -86,19 +86,22 @@ footer {
 
 footer div {
     display: flex;
-    gap: 10px;
+    gap: 5px;
 }
 
 footer div a {
     display: flex;
-    color: black;
+    color: white;
     text-decoration: none;
-    background-color: white;
     padding: 5px 10px;
     border-radius: 10px;
     align-items: center;
     font-size: 0;
     transition: all 0.2s;
+}
+
+footer div img {
+    width: 32px;
 }
 
 footer div a:hover {
