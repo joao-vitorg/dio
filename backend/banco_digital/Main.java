@@ -1,6 +1,8 @@
-import entities.Account;
-import entities.BusinessAccount;
-import entities.SavingAccount;
+package banco_digital;
+
+import banco_digital.entities.Account;
+import banco_digital.entities.BusinessAccount;
+import banco_digital.entities.SavingAccount;
 
 public class Main {
 	public static void main(String[] args) {

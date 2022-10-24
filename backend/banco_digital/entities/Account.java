@@ -1,11 +1,9 @@
-package entities;
+package banco_digital.entities;
 
 public abstract class Account {
-	private final String holder;
 	private double balance;
 
-	public Account(String holder, double initialBalance) {
-		this.holder = holder;
+	protected Account(String holder, double initialBalance) {
 		deposit(initialBalance);
 	}
 

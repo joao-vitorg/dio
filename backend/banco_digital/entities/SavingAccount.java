@@ -1,4 +1,4 @@
-package entities;
+package banco_digital.entities;
 
 public class SavingAccount extends Account {
 	private final double interestRate;
@@ -8,7 +8,4 @@ public class SavingAccount extends Account {
 		this.interestRate = interestRate;
 	}
 
-	public void updateBalance() {
-		deposit(interestRate * getBalance());
-	}
 }

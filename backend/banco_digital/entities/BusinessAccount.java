@@ -1,4 +1,4 @@
-package entities;
+package banco_digital.entities;
 
 public class BusinessAccount extends Account {
 	private final double loanLimit;
@@ -8,7 +8,4 @@ public class BusinessAccount extends Account {
 		this.loanLimit = loanLimit;
 	}
 
-	public void loan(double amount) {
-		if (amount <= loanLimit) this.deposit(amount);
-	}
 }
