@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+        <title>Pokédex</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,500,700" rel="stylesheet" />
+        <link href="css/global.css" rel="stylesheet" />
+        <link href="css/pokedex.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <main>
+            <section class="content">
+                <h1>Pokédex</h1>
+
+                <ol class="pokemons" id="pokemonList"></ol>
+
+                <input id="loadMoreButton" type="button" value="Load More" />
+            </section>
+        </main>
+
+        <script src="js/pokemon-class.js"></script>
+        <script src="js/poke-api.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
